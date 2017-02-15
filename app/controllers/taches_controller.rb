@@ -1,9 +1,9 @@
 class TachesController < ApplicationController
     def index
       if params[:theme]
-        @taches = Tache.where(category: params[:theme])
+        @taches = Tache.where(user_id: current_user).where(category: params[:theme])
       else
-        @taches = Tache.all.reverse
+        @taches = Tache.where(user_id: current_user).all.reverse
       end
     end
 
