@@ -1,0 +1,18 @@
+<div class="wrapper">
+    <div class=" container form-signin">
+        <%= simple_form_for @tache do |f| %>
+              <%= f.input :name, placeholder: "Name", label: "Tache name" %>
+              <%= f.input :theme, collection: ["IT","kickstarter","empire building", "ART", "Marketing", "Engineering", "Français", "English", "HSE", "3D", "Blog", "Video", "Open source", "ranger", "Sale", "mooc", "script", "Contactory", "ProcessHunt", "100D", "CSS", "AI", "Community", "RDV", "meeting/interview"], prompt:"Category" %>
+              <%= f.input :date, label: "Date" %>
+              <%= f.input :timedo, label: "Time to do it" %>
+              <%= f.input :etat, collection: ["a faire","hidden"], label: "etat" %>
+              <%= f.input :more, as: :text, label: "description" %>
+              <%= f.button :submit, "ADD", class: "btn btn-primary btn-lg btn-block btn-color" %>
+        <% end %>
+    </div>
+</div>
+<style>
+    #tache_more{
+        height:100px;
+    }
+</style>

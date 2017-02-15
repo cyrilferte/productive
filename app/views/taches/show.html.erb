@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <br>  <br>  <br>
+        </div>
+        <div class="col-sm-4 border"><br>
+            <div class="circle2 <%= @tache.theme %> text-center centered">
+                <p><%= @tache.theme %></p>
+            </div><br><br>
+            <div class="col-sm-12 text-center">
+                <h1><%= @tache.name %></h1>
+                <h2><%= @tache.timedo %> minutes</h2>
+                <h3><%= @tache.date %></h3>
+                <div class="text-center"><%= link_to "Edit", edit_tach_path, class:"btn btn-info" %></div>
+                <br><br>
+            </div>
+        </div>
+        <div class="col-sm-4">
+        </div>
+    </div>
+</div>
+<style>
+.border{border: 2px solid;}
+    .circle2{
+
+
+  width:300px;
+  height:300px;
+  border-radius:50%;
+  background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+
+}
+.circle2 p {
+  margin:0 auto;
+   font-weight: bold;
+  font-size: 20px;
+  position:relative;
+  top: 40%;
+
+  color:white;
+}
+.centered{    
+ margin:0 auto;}
+</style>
